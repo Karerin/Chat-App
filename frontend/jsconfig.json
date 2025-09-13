@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src", //original
+    "jsx": "react-jsx", //original
+
+    // ✅ Turn JS into "TypeScript-lite"
+    "checkJs": true, //original
+
+    // ✅ Strictness checks
+    "strict": true, // enables strict checks overall
+    "noImplicitAny": true, // warns if something has no type (catch missing imports)
+    "strictNullChecks": true, // prevents null/undefined mistakes
+
+    // ✅ Clean code helpers
+    "noUnusedLocals": true, // warns if you declared but didn’t use a variable
+    "noUnusedParameters": true, // warns if a function parameter is unused
+    "noImplicitReturns": true, // warns if not all paths return a value
+    "noFallthroughCasesInSwitch": true // warns if you forget "break" in switch
+  },
+  "include": ["src"] //original
+}
