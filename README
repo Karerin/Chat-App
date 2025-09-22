@@ -1,0 +1,3 @@
+npm install daisyui@4.12.14 --save-exact
+This writes the exact version into package.json. Commit package.json + package-lock.json after this.
+which versions the tutorial used — saves future headaches for you or teammates.

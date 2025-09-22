@@ -1,4 +1,9 @@
 import { useEffect } from "react"
+import { useAuthStore } from "./store/useAuthStore"
+import { useThemeStore } from "./store/useThemeStore"
+
+import { Loader } from "lucide-react"
+import { Toaster } from "react-hot-toast"
 import { Navigate, Route, Routes } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import HomePage from "./pages/HomePage"
@@ -6,14 +11,10 @@ import LoginPage from "./pages/LoginPage"
 import ProfilePage from "./pages/ProfilePage"
 import SettingsPage from "./pages/SettingsPage"
 import SignUpPage from "./pages/SignUpPage"
-import { useAuthStore } from "./store/useAuthStore"
-
-import { Loader } from "lucide-react"
-import { Toaster } from "react-hot-toast"
 
 const App = () => {
   const { authUser, checkAuth, isCheckingAuth } = useAuthStore()
-
+  const { theme } = useThemeStore()
   useEffect(() => {
     checkAuth()
   }, [checkAuth])
@@ -28,7 +29,7 @@ const App = () => {
     )
   //zustand the global state management library example state for the authenticated user we gonna use it --to conditionally render routes based on whether the user is logged in or not
   return (
-    <div>
+    <div data-theme={theme}>
       <Navbar />
 
       <Routes>

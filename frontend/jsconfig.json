@@ -17,5 +17,21 @@
     "noImplicitReturns": true, // warns if not all paths return a value
     "noFallthroughCasesInSwitch": true // warns if you forget "break" in switch
   },
-  "include": ["src"] //original
+  "include": [
+    "src",
+    "tailwind.config.js",
+    "postcss.config.js",
+    "vite.config.js",
+    "*.d.ts",
+    "src/**/*.d.ts",
+    "daisyui.d.ts",
+    "*.js"
+  ]
+  // "include": [
+  //   "src",
+  //   "src/**/*.d.ts",
+  //   "daisyui.d.ts",
+  //   "tailwind.config.js",
+  //   "*.js"
+  // ] //original
 }
