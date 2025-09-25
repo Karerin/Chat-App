@@ -25,14 +25,21 @@ app.use(
     credentials: true, // this allows the cookies and the authorization headers to be sent with the requests
   })
 )
-
+// console.log("Loading routes...")
 app.use("/api/auth", authRoutes)
 app.use("/api/messages", messageRoutes)
+// console.log("Routes loaded!")
 
 if (process.env.NODE_ENV === "production") {
+  // console.log("NODE_ENV:", process.env.NODE_ENV)
+  // console.log("MONGODB_URI:", process.env.MONGODB_URI)
   app.use(express.static(path.join(__dirname, "../frontend/dist")))
 
-  app.get("*", (req, res) => {
+  // app.get("*", (req, res) => {
+  //   res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"))
+  // })
+
+  app.get(/.*/, (req, res) => {
     res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"))
   })
 }
