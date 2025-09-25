@@ -13,8 +13,11 @@ import SettingsPage from "./pages/SettingsPage"
 import SignUpPage from "./pages/SignUpPage"
 
 const App = () => {
-  const { authUser, checkAuth, isCheckingAuth } = useAuthStore()
+  const { authUser, checkAuth, isCheckingAuth, onlineUsers } = useAuthStore()
   const { theme } = useThemeStore()
+
+  console.log({ onlineUsers })
+  //every userEffect runs twice in dev mode
   useEffect(() => {
     checkAuth()
   }, [checkAuth])

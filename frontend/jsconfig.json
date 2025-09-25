@@ -15,7 +15,12 @@
     "noUnusedLocals": true, // warns if you declared but didn’t use a variable
     "noUnusedParameters": true, // warns if a function parameter is unused
     "noImplicitReturns": true, // warns if not all paths return a value
-    "noFallthroughCasesInSwitch": true // warns if you forget "break" in switch
+    "noFallthroughCasesInSwitch": true, // warns if you forget "break" in switch
+
+    // 👇 Add these
+    "module": "esnext",
+    "moduleResolution": "bundler", // 👈 for Vite projects
+    "target": "esnext"
   },
   "include": [
     "src",

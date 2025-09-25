@@ -1,0 +1,22 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "npm install daisyui@4.12.14 --save-exact This writes the exact version into package.json. Commit package.json + package-lock.json after this. which versions the tutorial used — saves future headaches for you or teammates.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "npm run start --prefix backend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Karerin/Chat-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Karerin/Chat-App/issues"
+  },
+  "homepage": "https://github.com/Karerin/Chat-App#readme"
+}
