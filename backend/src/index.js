@@ -38,8 +38,9 @@ if (process.env.NODE_ENV === "production") {
   // app.get("*", (req, res) => {
   //   res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"))
   // })
-
+  // On some Express versions + Node.js 22, the wildcard "*" in app.get("*") triggers path-to-regexp to throw that Missing parameter name error.
   app.get(/.*/, (req, res) => {
+    //to avoid regex error use // instead of *
     res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"))
   })
 }
